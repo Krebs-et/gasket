@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "pouchdb": "^9.0.0"
   }
 }
