@@ -32,3 +32,8 @@
 [Wed, 13 May 2026 21:17:10 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1778707030020 200
 [Wed, 13 May 2026 21:17:10 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fontawesome-webfont.woff 304
 [Wed, 13 May 2026 21:17:10 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Mon, 18 May 2026 14:04:12 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Mon, 18 May 2026 14:04:12 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
+[Mon, 18 May 2026 14:04:15 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET / 200
+[Mon, 18 May 2026 14:04:44 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Mon, 18 May 2026 14:04:44 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
