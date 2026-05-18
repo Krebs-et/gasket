@@ -23,6 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-./_replicator
-./_users
-./pouch__all_dbs__
+_replicator
+_users
+pouch__all_dbs__
