@@ -1,14 +1,15 @@
-import { carService } from "./src/service/carService";
+// app.js
 
-async function init() {
+import renderCards from "./src/views/car/cardsContainer";
+import renderForm from "./src/views/modal/renderForm";
+import upsertForm from "./src/views/modal/renderForm";
 
-    try {
-        let car = await carService.getCar("car001");
-        console.log(car.model);
-    } catch (err) {
-        console.log("Erro al inicializar.");
-    }
-    
-}
 
-init();
+// Escuchamos a que el DOM esté completamente cargado para evitar errores de elementos inexistentes
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Ejecutamos el contenedor de tarjetas
+    renderForm("")
+    renderCards();
+
+});

@@ -19,41 +19,61 @@
 
     <script type="module" src="main.js"></script>
 
+    <script type="module" src="src/views/modal/submitForm.js" defer></script>
+    <script type="module" src="src/views/modal/removeCar.js" defer></script>
+    <script type="module" src="src/views/modal/renderForm.js"></script>
+
 
 </head>
 
 <body>
 
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <!-- ELEMENTOS DE NAVEGACIÓN -->
+
+    <ul class="nav nav-tabs pt-3 px-4" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
-                role="tab" aria-controls="home" aria-selected="true">Mi Auto</button>
+                role="tab" aria-controls="home" aria-selected="true">Mis autos</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-                role="tab" aria-controls="profile" aria-selected="false">Mantenimientos</button>
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mantenimientos"
+                type="button" role="tab" aria-controls="profile" aria-selected="false">Mantenimientos</button>
         </li>
         <li class="nav-item" role="presentation">
             <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button"
-                role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+                role="tab" aria-controls="messages" aria-selected="false">Sugerencias</button>
         </li>
         <li class="nav-item" role="presentation">
             <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button"
-                role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+                role="tab" aria-controls="settings" aria-selected="false">Configuración</button>
         </li>
+        <li class="nav-item ms-auto" role="presentation">
+            <button type="button" class="btn btn-outline-success fw-bold" data-bs-toggle="modal"
+                data-bs-target="#upsertAuto" onClick="renderForm('add')">Añadir auto</button>
+        </li>
+
+        </button>
     </ul>
 
-    <!-- Tab panes -->
+    <!-- PESTAÑAS DE NAVEGACIÓN -->
     <div class="tab-content">
+
+        <!-- CONTENEDOR DE LAS CARTAS DE "MIS AUTOS" -->
         <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div id="carCardsContainer" class="p-5 d-flex justify-content-around flex-wrap gap-3">
+            </div>
+        </div>
+
+        <!-- CONTENEDOR DE MANTENIMIENTOS -->
+        <div class="tab-pane" id="mantenimientos" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
             <table class="table" id="mantenimientos">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Año</th>
+                        <th scope="col">Aceite</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -77,19 +97,23 @@
                     </tr>
                 </tbody>
             </table>
-
         </div>
-        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
-        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">...</div>
-        <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">...</div>
+
+        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">...
+        </div>
+
+        <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">...
+        </div>
     </div>
 
-
-
+    <!-- Formulario -->
+    <div class="modal fade" id="upsertAuto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>

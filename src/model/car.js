@@ -1,20 +1,39 @@
-export class Car  {
+export class Car {
 
     constructor(
         id,
+        rev,
         brand,
         model,
         year,
-        vin = "Sin VIN registrado."
+        vin = "Sin VIN registrado.",
+        oilChange = "Sin datos registrados.",
+        breakCheck = "Sin datos registrados.",
     ) {
-
-        this._id = id,
+    
+        if (id) this._id = id;
+        if (rev) this._rev = rev;
         this.brand = brand;
         this.model = model;
         this.year = year;
         this.vin = vin;
-        this.oilChange = "Sin datos registrados.";
-        this.breakCheck = "Sin datos registrados.";
+        this.oilChange = oilChange;
+        this.breakCheck = breakCheck;
+    }
+
+    static fromJSON(json) {
+        const data = json.doc ? json.doc : json;
+
+        return new Car(
+            data._id,
+            data._rev,
+            data.brand,
+            data.model,
+            data.year,
+            data.vin,
+            data.oilChange,
+            data.breakCheck,
+        );
     }
 
     updateInfo(
@@ -30,15 +49,13 @@ export class Car  {
 
     changeOil() {
         this.oilChange = Date.now();
+        console.log("Se ha cambiado el aceite con fecha: " + this.oilChange);
     }
 
 
     checkBreaks() {
         this.breakCheck = Date.now();
     }
-
-
-    
 
 
 

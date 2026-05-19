@@ -2,10 +2,12 @@ export class Maintance {
 
     constructor (
         date,
-        car = "No asignado."
+        car,
+        description,
     ) {
         this.date = date;
         this.car = car;
+        this.description;
     }
     
 }

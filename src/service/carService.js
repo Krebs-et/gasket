@@ -1,16 +1,39 @@
 import { carInterface } from "../infrastructure/carInterface";
 
-export const carService =  {
+export const carService = {
 
-    upsertCar: async (car) => {
-        return await carInterface.createCar(car);
+    update: (car) => {
+        return carInterface.put(car);
     },
 
-    getCar: async (id) =>{
-        return await carInterface.getCar(id);
+    insert: (car) => {
+        return carInterface.post(car);
+    },
+
+    getCar: (id) => {
+        return carInterface.getDoc(id);
+    },
+
+    loadCars: () => {
+
+        try {
+            return carInterface.getAllDocs();
+
+
+        } catch (err) {
+            console.log("Error al inicializar." + err);
+        }
+
+    },
+
+    removeCar: (car) => {
+        try {
+            return carInterface.removeDoc(car);
+        } catch (error) {
+            console.error("Error al eliminar el auto: " + error);
+        }
     }
 
-    
 
 
 
