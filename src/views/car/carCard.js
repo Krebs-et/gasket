@@ -9,7 +9,7 @@ function carCard(car) {
                     </div>
                     <ul class="list-group list-group-flush">
                     
-                        <li class="list-group-item">VIN: ${car.vin}</li>
+                        <li class="list-group-item">VIN: ${car.vin.trim() ? car.vin.trim() : "Sin vin registrado."}</li>
                         <li class="list-group-item">Último cambio de aceite: ${car.oilChange}</li>
                         <li class="list-group-item">Última revisión de frenos: ${car.breakCheck}</li>
                     </ul>

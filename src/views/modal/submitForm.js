@@ -10,6 +10,7 @@ async function submitForm(type) {
         "rev": document.getElementById("docRev")?.value,
         "brand": document.getElementById("brand").value,
         "model": document.getElementById("model").value,
+        "VIN": document.getElementById("vin").value,
         "year": document.getElementById("year").value
     }
 
@@ -21,6 +22,7 @@ async function submitForm(type) {
         car.brand = data.brand;
         car.model = data.model;
         car.year = data.year;
+        car.vin = data.VIN;
         await carService.update(car);
 
     } else {
