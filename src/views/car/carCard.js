@@ -1,6 +1,24 @@
-function carCard(car) {
+import { carService } from "../../service/carService";
 
-    console.log(car);
+
+async function removeCar(carId) {
+
+    const result = confirm("¿Desea eliminar este auto?")
+
+    const car = await carService.getCar(carId)
+
+    if (result) {
+
+        await carService.removeCar(car);
+        location.reload();
+    }
+
+}
+
+window.removeCar = removeCar;
+
+
+function carCard(car) {
 
     return `<div class="card" style="width: 18rem;">
                     <img src="${car.img || "https://placehold.co/200x150"}" class="card-img-top" alt="${car.model}">

@@ -8,17 +8,17 @@ function upsertForm(type, car) {
                     <h1 class="modal-title fs-5" id="exampleModalLabel">${type === "add" ? 'Añadir' : 'Editar'} auto</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form class="modal-body d-flex justify-content-around flex-wrap" id="upsertForm" action="javascript:alert('Cambios guardados');">
+                <form class="modal-body d-flex justify-content-around flex-wrap" id="upsertForm" action="javascript:submitForm();">
 
                     <div class="mb-3 col-5">
                         <label for="brand" class="form-label">Marca</label>
-                        <input value ="${car ? car.brand : ''}"  type="text" class="form-control" id="brand"
+                        <input required value ="${car ? car.brand : ''}"  type="text" class="form-control" id="brand"
                             placeholder="Ford, Toyota, etc.">
                     </div>
 
                     <div class="mb-3 col-5">
                         <label for="model" class="form-label">Modelo</label>
-                        <input value="${car ? car.model : ''}" type="text" class="form-control" id="model"
+                        <input required value="${car ? car.model : ''}" type="text" class="form-control" id="model"
                             placeholder="Mondeo, Yaris, etc.">
                     </div>
 
@@ -29,7 +29,7 @@ function upsertForm(type, car) {
                     </div>                
 
                     <div class="mb-3 col-5">
-                       <label   for="vin" class="form-label">VIN</label>
+                       <label for="vin" class="form-label">VIN</label>
                         <input value="${car ? car.vin : ''}" type="text" value="" class="form-control" id="vin"
                             placeholder="1FABEW23OFS445">
                     </div>
@@ -44,7 +44,7 @@ function upsertForm(type, car) {
 
                     <div class="modal-footer col-12">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" onclick="submitForm()"  class="btn btn-primary">Guardar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
                     </div>
                 </form>
             </div>

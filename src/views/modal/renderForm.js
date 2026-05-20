@@ -6,8 +6,8 @@ async function renderForm(type, carId) {
 
     let car;
 
-    console.log(carId);
     const formContent = document.getElementById("upsertAuto");
+
     if (carId) {
         car = await carService.getCar(carId);
         const carYear = car.year;
@@ -15,13 +15,15 @@ async function renderForm(type, carId) {
     } else {
         formContent.innerHTML = upsertForm(type);
     }
+
     const today = new Date();
     const select = document.getElementById("year");
+
     for (let i = 1990; i <= today.getFullYear(); i++) {
 
         const isSelected = (car && car.year == i) ? 'selected' : '';
 
-        select.insertAdjacentHTML('beforeend', 
+        select.insertAdjacentHTML('beforeend',
             `<option  ${isSelected} value="${i}">${i}</option>`);
     }
 }

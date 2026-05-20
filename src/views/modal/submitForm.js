@@ -5,6 +5,8 @@ import renderCards from "../car/cardsContainer";
 
 async function submitForm(type) {
 
+    if (!confirm("¿Desea guardar los cambios?")) {return}
+
     let data = {
         "id": document.getElementById("docId")?.value,
         "rev": document.getElementById("docRev")?.value,
@@ -13,8 +15,6 @@ async function submitForm(type) {
         "VIN": document.getElementById("vin").value,
         "year": document.getElementById("year").value
     }
-
-    console.log(data.id);
 
     if (data.id && data.rev) {
 
@@ -32,10 +32,11 @@ async function submitForm(type) {
             data.brand,
             data.model,
             data.year,
+            data.VIN
         )
-        await carService.insert(car);
+            await carService.insert(car);
 
-    }
+        }
 
     location.reload();
 
