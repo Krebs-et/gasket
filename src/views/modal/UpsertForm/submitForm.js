@@ -1,7 +1,7 @@
-import { carInterface } from "../../infrastructure/carInterface";
-import { Car } from "../../model/car"
-import { carService } from "../../service/carService";
-import renderCards from "../car/cardsContainer";
+import { carInterface } from "../../../infrastructure/carInterface";
+import { Car } from "../../../model/car"
+import { carService } from "../../../service/carService";
+import renderCards from "../../car/cardsContainer";
 
 async function submitForm(type) {
 

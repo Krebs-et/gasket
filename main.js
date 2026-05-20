@@ -1,12 +1,10 @@
 // app.js
 
 import renderCards from "./src/views/car/cardsContainer";
-import renderForm from "./src/views/modal/renderForm";
-import upsertForm from "./src/views/modal/renderForm";
-import submitForm from "./src/views/modal/submitForm";
+import upsertForm from "./src/views/modal/UpsertForm/upsertForm";
+import renderForm from "./src/views/modal/UpsertForm/renderForm"
+import submitForm from "./src/views/modal/UpsertForm/submitForm";
 
-
-// Escuchamos a que el DOM esté completamente cargado para evitar errores de elementos inexistentes
 document.addEventListener("DOMContentLoaded", () => {
 
     renderCards();

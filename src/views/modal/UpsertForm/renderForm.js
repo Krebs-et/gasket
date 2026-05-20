@@ -1,5 +1,5 @@
-import { Car } from "../../model/car";
-import { carService } from "../../service/carService";
+import { Car } from "../../../model/car";
+import { carService } from "../../../service/carService";
 import upsertForm from "./upsertForm";
 
 async function renderForm(type, carId) {
