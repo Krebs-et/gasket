@@ -2,10 +2,24 @@ import { carInterface } from "../../../infrastructure/carInterface";
 import { Car } from "../../../model/car"
 import { carService } from "../../../service/carService";
 import renderCards from "../../car/cardsContainer";
+import validateFields from "./validateForm";
 
 async function submitForm(type) {
 
-    if (!confirm("¿Desea guardar los cambios?")) {return}
+
+
+    const fields = [
+        document.getElementById("brand"),
+        document.getElementById("model"),
+    ]
+
+    if (!validateFields(fields)) {
+        alert("Revise los campos marcados.")
+        return
+    }
+
+
+    if (!confirm("¿Desea guardar los cambios?")) { return }
 
     let data = {
         "id": document.getElementById("docId")?.value,
@@ -15,6 +29,9 @@ async function submitForm(type) {
         "VIN": document.getElementById("vin").value,
         "year": document.getElementById("year").value
     }
+
+
+
 
     if (data.id && data.rev) {
 
@@ -34,13 +51,15 @@ async function submitForm(type) {
             data.year,
             data.VIN
         )
-            await carService.insert(car);
+        await carService.insert(car);
 
-        }
+    }
 
     location.reload();
 
 }
+
+
 
 window.submitForm = submitForm;
 

@@ -12,13 +12,13 @@ function upsertForm(type, car) {
 
                     <div class="mb-3 col-5">
                         <label for="brand" class="form-label">Marca</label>
-                        <input required value ="${car ? car.brand : ''}"  type="text" class="form-control" id="brand"
+                        <input  value ="${car ? car.brand : ''}"  type="text" class="form-control" id="brand"
                             placeholder="Ford, Toyota, etc.">
                     </div>
 
                     <div class="mb-3 col-5">
                         <label for="model" class="form-label">Modelo</label>
-                        <input required value="${car ? car.model : ''}" type="text" class="form-control" id="model"
+                        <input  value="${car ? car.model : ''}" type="text" class="form-control" id="model"
                             placeholder="Mondeo, Yaris, etc.">
                     </div>
 
