@@ -11,6 +11,7 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.13.1",
     "pouchdb": "^9.0.0"
   }
 }
