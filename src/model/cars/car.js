@@ -9,6 +9,7 @@ export class Car {
         vin = "Sin VIN registrado.",
         oilChange = "Sin datos registrados.",
         breakCheck = "Sin datos registrados.",
+        img = undefined
     ) {
     
         if (id) this._id = id;
@@ -19,6 +20,7 @@ export class Car {
         this.vin = vin;
         this.oilChange = oilChange;
         this.breakCheck = breakCheck;
+        this.type= "car";
     }
 
     static fromJSON(json) {
@@ -48,7 +50,7 @@ export class Car {
 
 
     changeOil() {
-        this.oilChange = Date.now();
+        this.oilChange = new Date().toISOString().substring(0,19);
         console.log("Se ha cambiado el aceite con fecha: " + this.oilChange);
     }
 

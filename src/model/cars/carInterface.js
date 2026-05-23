@@ -1,4 +1,7 @@
-import { db } from "./db";
+import {infrastructure} from "../../infrastructure/db.js"
+
+const db = infrastructure.db
+const remoteDB = infrastructure.remoteDB
 
 db.info().then(function (info) {
     console.log('Connected to:', info.db_name);
@@ -6,6 +9,12 @@ db.info().then(function (info) {
     console.log('Connection error:', err);
 });
 
+
+remoteDB.info().then(function (info) {
+    console.log('Connected to:', info.db_name);
+}).catch(function (err) {
+    console.log('Connection error:', err);
+});
 
 export const carInterface = {
 
@@ -59,7 +68,6 @@ export const carInterface = {
 
     removeDoc:  (doc) => {
         try {
-            console.log(doc);
             return db.remove(doc);
         } catch (error) {
             console.error("Error al eliminar el auto: " + error);

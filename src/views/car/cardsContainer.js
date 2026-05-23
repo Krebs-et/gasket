@@ -1,8 +1,11 @@
 import { carService } from "../../service/carService"
 import carCard from "./carCard"
-import { Car } from "../../model/car";
+import { Car } from "../../model/cars/car";
+import { maintanceHandler } from "../modal/CarMaintance/maintanceModalHandler";
 
 export async function renderCards() {
+
+    console.log(maintanceHandler.intance);
 
     const container = document.getElementById("carCardsContainer");
 
@@ -23,6 +26,8 @@ export async function renderCards() {
         const cardsHTML = cars.map(car => carCard(
             Car.fromJSON(car)
         )).join("");
+
+        
 
         container.innerHTML = cardsHTML;
 

@@ -1,5 +1,4 @@
-import { carInterface } from "../../../infrastructure/carInterface";
-import { Car } from "../../../model/car"
+import { Car } from "../../../model/cars/car"
 import { carService } from "../../../service/carService";
 import renderCards from "../../car/cardsContainer";
 import validateFields from "./validateForm";
@@ -55,7 +54,18 @@ async function submitForm(type) {
 
     }
 
-    location.reload();
+
+    const modalElement = document.getElementById("upsertAuto");
+    const modalInstance =  bootstrap.Modal.getInstance(modalElement);
+    
+    
+
+
+    modalInstance.hide();
+
+    
+
+    renderCards();
 
 }
 

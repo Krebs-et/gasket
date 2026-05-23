@@ -4,10 +4,12 @@ export class Maintance {
         date,
         car,
         description,
+        type
     ) {
         this.date = date;
         this.car = car;
-        this.description;
+        this.description = description; 
+        this.type = type;
     }
     
 }

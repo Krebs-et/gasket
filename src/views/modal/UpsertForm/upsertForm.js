@@ -29,9 +29,9 @@ function upsertForm(type, car) {
                     </div>                
 
                     <div class="mb-3 col-5">
-                       <label for="vin" class="form-label">VIN</label>
+                        <label for="vin" class="form-label">VIN</label>
                         <input value="${car ? car.vin : ''}" type="text" value="" class="form-control" id="vin"
-                            placeholder="1FABEW23OFS445">
+                        placeholder="1FABEW23OFS445">
                     </div>
 
                     <div class="mb-3 col-5">

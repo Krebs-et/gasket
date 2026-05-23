@@ -1,4 +1,3 @@
-import { Car } from "../../../model/car";
 import { carService } from "../../../service/carService";
 import upsertForm from "./upsertForm";
 

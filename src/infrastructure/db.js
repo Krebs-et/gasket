@@ -1,3 +1,9 @@
 import PouchDB from 'pouchdb/dist/pouchdb.js';
 
-export const db = new PouchDB("gasket");
+
+
+export const infrastructure = {
+    remoteDB: new PouchDB('http://krebs:password@localhost:5984/remote_gasket'),
+    db: new PouchDB("gasket")
+}
+

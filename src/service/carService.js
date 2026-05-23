@@ -1,4 +1,4 @@
-import { carInterface } from "../infrastructure/carInterface";
+import { carInterface } from "../model/cars/carInterface";
 
 export const carService = {
 
@@ -33,8 +33,5 @@ export const carService = {
             console.error("Error al eliminar el auto: " + error);
         }
     }
-
-
-
 
 }
