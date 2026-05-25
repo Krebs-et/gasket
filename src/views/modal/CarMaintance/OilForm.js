@@ -31,7 +31,7 @@ function OilForm(carInstance) {
             
             <div class="mb-3">
                     <label for="notas" class="form-label">Notas</label>
-                    <textarea class="form-control" id="notas" rows="3" placeholder="Describa brevemente los detalles durante el servicio."></textarea>
+                    <textarea class="form-control oilField" id="notas" rows="3" placeholder="Describa brevemente los detalles durante el servicio."></textarea>
             </div>
             
         </form>

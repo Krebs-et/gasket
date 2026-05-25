@@ -1,6 +1,5 @@
 export class OilChange {
     constructor(
-        date,
         oilViscosity,
         oilBrand,
         oilFilterPartNumber,

@@ -75,8 +75,14 @@ export const maintanceHandler = {
             data.push(field?.value)
         });
 
-        const oilChange = new OilChange(data);
-        const maintance = new Maintance(maintanceHandler.carInstance, oilChange);
+        const oilChange = new OilChange(
+            data[0],
+            data[1],
+            data[2],
+            data[3],
+        );
+
+        const maintance = new Maintance(maintanceHandler.carInstance._id, oilChange);
 
         maintanceService.insert(maintance);
         console.log(maintance);

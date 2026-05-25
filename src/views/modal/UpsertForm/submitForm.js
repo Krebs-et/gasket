@@ -24,11 +24,12 @@ async function submitForm(type) {
         "brand": document.getElementById("brand").value,
         "model": document.getElementById("model").value,
         "VIN": document.getElementById("vin").value,
-        "year": document.getElementById("year").value
+        "year": document.getElementById("year").value,
+        "img": document.getElementById("img").value
     }
 
 
-
+    console.log(data.img);
 
     if (data.id && data.rev) {
 
@@ -37,6 +38,7 @@ async function submitForm(type) {
         car.model = data.model;
         car.year = data.year;
         car.vin = data.VIN;
+        car.img = data.img;
         await carService.update(car);
 
     } else {
@@ -46,8 +48,10 @@ async function submitForm(type) {
             data.brand,
             data.model,
             data.year,
-            data.VIN
+            data.VIN,
+            data.img
         )
+
         await carService.insert(car);
 
     }
