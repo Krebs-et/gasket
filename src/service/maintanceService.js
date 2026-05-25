@@ -14,12 +14,13 @@ export const maintanceService = {
         return maintanceInterface.getDoc(id);
     },
 
-    loadServices: () => {
+    loadMaitances: () => {
+
+        maintanceInterface.getAllDocs();
+
 
         try {
-            return maintanceInterface.getAllDocs();
-
-
+            return 
         } catch (err) {
             console.log("Error al inicializar." + err);
         }

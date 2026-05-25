@@ -35,7 +35,6 @@ export const maintanceInterface = {
         try {
             return db.allDocs({
                 include_docs: true,
-                attachments: true
             });
         } catch (error) {
             console.log("Error al recuperar la información de los servicios." + error);

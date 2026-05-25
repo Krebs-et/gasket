@@ -1,6 +1,6 @@
 body {
   height: 100vh;
-  background-image: url("../public/assets/android-chrome-192x192.png");
+  background-image: url("/assets/android-chrome-192x192.png");
   background-repeat: no-repeat;
   background-position: 95% 95% ;
   background-size: 50px;

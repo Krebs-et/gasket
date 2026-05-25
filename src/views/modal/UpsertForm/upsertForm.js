@@ -30,8 +30,14 @@ function upsertForm(type, car) {
 
                     <div class="mb-3 col-5">
                         <label for="vin" class="form-label">VIN</label>
-                        <input value="${car ? car.vin : ''}" type="text" value="" class="form-control" id="vin"
+                        <input value="${car ? car.vin : ''}" type="text"class="form-control" id="vin"
                         placeholder="1FABEW23OFS445">
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="img" class="form-label">Imagen</label>
+                        <input value="${car ? car.img : ''}" type="file" class="form-control" id="img"
+                        placeholder="/foto.jpg">
                     </div>
 
                     <div class="mb-3 col-5">
@@ -41,6 +47,8 @@ function upsertForm(type, car) {
                     <div class="mb-3 col-5">
                         <input value="${car ? car._rev : ''}" type="hidden" id="docRev">
                     </div>
+
+                    
 
                     <div class="modal-footer col-12">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>

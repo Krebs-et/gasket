@@ -9,7 +9,7 @@ export class Car {
         vin = "Sin VIN registrado.",
         oilChange = "Sin datos registrados.",
         breakCheck = "Sin datos registrados.",
-        img = undefined
+        img
     ) {
     
         if (id) this._id = id;
@@ -21,6 +21,7 @@ export class Car {
         this.oilChange = oilChange;
         this.breakCheck = breakCheck;
         this.type= "car";
+        this.img = img;
     }
 
     static fromJSON(json) {

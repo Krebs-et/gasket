@@ -5,8 +5,6 @@ import validateFields from "./validateForm";
 
 async function submitForm(type) {
 
-
-
     const fields = [
         document.getElementById("brand"),
         document.getElementById("model"),
@@ -54,22 +52,14 @@ async function submitForm(type) {
 
     }
 
-
     const modalElement = document.getElementById("upsertAuto");
     const modalInstance =  bootstrap.Modal.getInstance(modalElement);
-    
-    
-
 
     modalInstance.hide();
-
-    
 
     renderCards();
 
 }
-
-
 
 window.submitForm = submitForm;
 

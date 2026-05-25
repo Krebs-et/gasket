@@ -1,0 +1,17 @@
+function MaintanceRow(maintance) {
+
+    
+
+
+    return `<tr>
+                        <th scope="row"></th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+            </tr>`
+
+
+}
+
+
+export default MaintanceRow
