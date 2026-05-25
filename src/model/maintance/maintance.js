@@ -1,15 +1,14 @@
 export class Maintance {
 
     constructor (
-        date,
         car,
-        description,
-        type
+        service
     ) {
-        this.date = date;
+
         this.car = car;
-        this.description = description; 
-        this.type = type;
+        this.service = service;
+        this.date = Date.now().toString();
+
     }
     
 }

@@ -44,7 +44,7 @@ export const carInterface = {
         }
     },
 
-    getAllDocs: (id) => {
+    getAllDocs: () => {
         try {
             return db.allDocs({
                 include_docs: true,

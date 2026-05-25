@@ -14,15 +14,28 @@ export const carService = {
         return carInterface.getDoc(id);
     },
 
-    loadCars: () => {
+    loadCars: async () => {
+
+        let cars = [];      
 
         try {
-            return carInterface.getAllDocs();
+        
+        const docs = await carInterface.getAllDocs();
+        const rows = docs.rows;
+        
+        rows.forEach(row => {
 
+            if (row.doc.type === 'car') {
+                cars.push(row.doc);
+            }
+
+        });
 
         } catch (err) {
             console.log("Error al inicializar." + err);
         }
+    
+        return cars;
 
     },
 

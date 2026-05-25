@@ -7,6 +7,7 @@ import { Maintance } from "../../../model/maintance/maintance";
 import OilModal from "./OilForm";
 import MaintanceSelection from "./MaintanceSelection";
 import OilForm from "./OilForm";
+import { OilChange } from "../../../model/maintance/oilChange";
 import renderCards from "../../car/cardsContainer";
 
 import validateFields from "../UpsertForm/validateForm";
@@ -74,13 +75,11 @@ export const maintanceHandler = {
             data.push(field?.value)
         });
 
-        data.push("oilChange");
-        
-        const maintance = new Maintance(data);
+        const oilChange = new OilChange(data);
+        const maintance = new Maintance(maintanceHandler.carInstance, oilChange);
 
         maintanceService.insert(maintance);
-
-        console.log(data);
+        console.log(maintance);
 
 
         if (confirm("¿Registrar el cambio de aceite?")) {

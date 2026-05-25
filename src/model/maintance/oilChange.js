@@ -5,13 +5,16 @@ export class OilChange {
         oilBrand,
         oilFilterPartNumber,
         serviceNotes
+
     ) {
         
-        this.date = date;
+        this.date = Date.now().toString();
         this.oilViscosity = oilViscosity;
         this.oilBrand = oilBrand;
         this.oilFilterPartNumber = oilFilterPartNumber;
         this.serviceNotes = serviceNotes;
+        this.type = "oilChange";
+        
 
     }
 }

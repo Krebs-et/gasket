@@ -5,8 +5,6 @@ import { maintanceHandler } from "../modal/CarMaintance/maintanceModalHandler";
 
 export async function renderCards() {
 
-    console.log(maintanceHandler.intance);
-
     const container = document.getElementById("carCardsContainer");
 
     if (!container) {
@@ -14,8 +12,8 @@ export async function renderCards() {
     }
 
     try {
-        const docs = await carService.loadCars();
-        const cars = [...docs.rows];
+
+        const cars = await carService.loadCars();
 
         if (cars.length === 0) {
             container.innerHTML = `<p class="text-muted">No hay autos registrados.</p>`;
