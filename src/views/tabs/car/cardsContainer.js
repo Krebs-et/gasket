@@ -1,7 +1,7 @@
-import { carService } from "../../service/carService"
+import { carService } from "../../../service/carService"
 import carCard from "./carCard"
-import { Car } from "../../model/cars/car";
-import { maintanceHandler } from "../modal/CarMaintance/maintanceModalHandler";
+import { Car } from "../../../model/cars/car";
+import { maintanceHandler } from "../../modal/CarMaintance/maintanceModalHandler";
 
 export async function renderCards() {
 
@@ -23,9 +23,7 @@ export async function renderCards() {
 
         const cardsHTML = cars.map(car => carCard(
             Car.fromJSON(car)
-        )).join("");
-
-        
+        )).join("");       
 
         container.innerHTML = cardsHTML;
 

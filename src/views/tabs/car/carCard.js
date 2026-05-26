@@ -1,8 +1,8 @@
-import { carService } from "../../service/carService";
+import { carService } from "../../../service/carService";
 import renderCards from "./cardsContainer";
 
 
-function carCard(car) {
+function CarCard(car) {
 
     async function removeCar(carId) {
 
@@ -33,11 +33,11 @@ function carCard(car) {
                     </ul>
                     <div class="card-body">
                         <button type="button" class="btn btn-outline-success fw-bold" data-bs-toggle="modal"
-                        data-bs-target="#upsertAuto" onClick="renderForm('edit', '${car._id}')">Editar</button>
+                        data-bs-target="#upsertModal" onClick="upsertFormHandler.renderForm('${car._id}')">Editar</button>
                         <button type="button" onClick="removeCar('${car._id}')"  class="btn btn-outline-danger">Eliminar</button>
                     </div>
                 </div>`
 
 }
 
-export default carCard;
+export default CarCard;

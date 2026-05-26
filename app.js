@@ -1,4 +1,4 @@
-import init from "./src/views/loaders"
+import init from "./src/views/loader"
 
 // const registerServiceWorker = async () => {
 //     if ("serviceWorker" in navigator) {

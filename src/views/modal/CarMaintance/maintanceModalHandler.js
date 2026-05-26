@@ -4,14 +4,13 @@ import { maintanceService } from "../../../service/maintanceService";
 
 import { Maintance } from "../../../model/maintance/maintance";
 
-import OilModal from "./OilForm";
+
 import MaintanceSelection from "./MaintanceSelection";
-import OilForm from "./OilForm";
+import OilForm from "../../forms/OilForm";
 import { OilChange } from "../../../model/maintance/oilChange";
-import renderCards from "../../car/cardsContainer";
+import renderCards from "../../tabs/car/cardsContainer";
 
-import validateFields from "../UpsertForm/validateForm";
-
+import validateFields from "../../forms/validateFields";
 
 
 export const maintanceHandler = {

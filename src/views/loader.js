@@ -1,7 +1,7 @@
-import renderCards from "./car/cardsContainer";
-import renderForm from "./modal/UpsertForm/renderForm"
-import carCard from "./car/carCard";
+import renderCards from "./tabs/car/cardsContainer";
+import carCard from "./tabs/car/carCard";
 import { maintanceHandler } from "./modal/CarMaintance/maintanceModalHandler";
+import { upsertFormHandler } from "./forms/UpsertForm/upsertFormHandler";
 import { infrastructure } from "../infrastructure/db";
 import PouchDB from 'pouchdb/dist/pouchdb.js';
 
@@ -30,11 +30,12 @@ async function init() {
 
 
     await renderCards();
-    await renderForm();
     await maintanceHandler.loadModal();
+    await upsertFormHandler.renderForm();
 
 }
 
+window.upsertFormHandler = upsertFormHandler;
 window.maintanceHandler = maintanceHandler;
 
 export default init;

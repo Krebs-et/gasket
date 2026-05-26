@@ -1,14 +1,12 @@
-import submitForm from "./submitForm";
-
-function upsertForm(type, car) {
-
+function UpsertForm(type, car) {
+    
     return `<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">${type === "add" ? 'Añadir' : 'Editar'} auto</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">${type === "insert" ? 'Añadir' : 'Editar'} auto</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form class="modal-body d-flex justify-content-around flex-wrap" id="upsertForm" action="javascript:submitForm();">
+                <form class="modal-body d-flex justify-content-around flex-wrap" id="upsertForm">
 
                     <div class="mb-3 col-5">
                         <label for="brand" class="form-label">Marca</label>
@@ -52,11 +50,11 @@ function upsertForm(type, car) {
 
                     <div class="modal-footer col-12">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-primary" onClick="upsertFormHandler.submitForm()">Guardar</button>
                     </div>
                 </form>
             </div>
         </div>`
 }
 
-export default upsertForm;
+export default UpsertForm;

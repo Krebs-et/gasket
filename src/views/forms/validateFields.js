@@ -12,6 +12,7 @@ function validateFields(fields) {
     });
 
     return isValid;
+
 }
 
 export default validateFields;

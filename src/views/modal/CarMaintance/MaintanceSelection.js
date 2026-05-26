@@ -1,5 +1,5 @@
 import { carService } from "../../../service/carService";
-import renderCards from "../../car/cardsContainer"
+import renderCards from "../../tabs/car/cardsContainer"
 
 function MaintanceSelection(carInstance) {
 
